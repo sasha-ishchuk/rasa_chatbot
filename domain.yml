@@ -10,9 +10,11 @@ intents:
   - bot_challenge
   - opening_hours
   - check_opening_hours
+  - check_opening_hours_at_time
 
 entities:
   - day_of_week
+  - time
 
 slots:
   day_of_week:
@@ -20,9 +22,15 @@ slots:
     mappings:
       - type: from_entity
         entity: day_of_week
+  time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: time
 
 actions:
   - action_check_opening_hours
+  - action_check_opening_hours_at_time
 
 responses:
   utter_greet:

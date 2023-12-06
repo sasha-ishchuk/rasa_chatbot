@@ -109,6 +109,11 @@ nlu:
     - Can I visit the restaurant on [Mondays](day_of_week)?
     - Tell me if the restaurant is open this [Thursday](day_of_week).
 
+- intent: check_opening_hours_at_time
+  examples: |
+    - Is the restaurant open at [15](time) on [Monday](day_of_week)?
+    - Can I visit the restaurant at [8](time) on [Sunday](day_of_week)?
+
 - synonym: Monday
   examples: |
     - Mondays

@@ -13,10 +13,14 @@ intents:
   - check_opening_hours
   - check_opening_hours_at_time
   - list_menu
+  - place_order
+  - place_order_default_one_item
 
 entities:
   - day_of_week
   - time
+  - quantity
+  - dish_item
 
 slots:
   day_of_week:
@@ -29,11 +33,23 @@ slots:
     mappings:
       - type: from_entity
         entity: time
+  quantity:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: quantity
+  dish_item:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: dish_item
 
 actions:
   - action_check_opening_hours
   - action_check_opening_hours_at_time
   - action_list_menu
+  - action_place_order
+  - action_place_order_default_one_item
 
 responses:
   utter_greet:

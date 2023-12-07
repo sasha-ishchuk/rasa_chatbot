@@ -56,3 +56,17 @@ stories:
     - action: action_list_menu
     - intent: thank_you
     - action: utter_thank_you
+
+- story: user wants to order some food
+  steps:
+    - intent: place_order
+    - action: action_place_order
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: user wants to order some food without specified quantity
+  steps:
+    - intent: place_order_default_one_item
+    - action: action_place_order_default_one_item
+    - intent: thank_you
+    - action: utter_thank_you

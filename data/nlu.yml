@@ -30,6 +30,29 @@ nlu:
     - bye bye
     - see you later
 
+- intent: thank_you
+  examples: |
+    - Thanks a lot!
+    - Thank you very much!
+    - I appreciate your help!
+    - Thank you so much for your assistance!
+    - Thanks for that!
+    - I'm grateful for your support!
+    - I want to express my thanks!
+    - Many thanks for your help!
+    - Thank you
+    - Thnx
+    - Thanks
+    - I'm so grateful!
+    - Big thank you!
+    - That's very kind of you, thank you!
+    - Much obliged!
+    - Thanks a bunch!
+    - I'm thankful for your time!
+    - Thank you for everything!
+    - I'm grateful for your input!
+    
+
 - intent: affirm
   examples: |
     - yes
@@ -113,6 +136,7 @@ nlu:
   examples: |
     - Is the restaurant open at [15](time) on [Monday](day_of_week)?
     - Can I visit the restaurant at [8](time) on [Sunday](day_of_week)?
+    - Restaurant is open on [Friday](day_of_week) at [23]:00(time)?
 
 - synonym: Monday
   examples: |
@@ -148,3 +172,17 @@ nlu:
   examples: |
     - Sundays
     - Sunday
+
+- intent: list_menu
+  examples: |
+    - What items are on the menu?
+    - Show me the menu, please.
+    - Can you list the menu options?
+    - What dishes do you serve?
+    - I'd like to know what's on the menu.
+    - What are the available food choices?
+    - Show me what I can order.
+    - Can you tell me about your menu?
+    - I'm interested in seeing the menu items.
+    - What kind of food do you offer?
+    - Can you provide information about your menu's pricing?

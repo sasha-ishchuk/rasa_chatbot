@@ -33,13 +33,26 @@ stories:
   steps:
   - intent: opening_hours
   - action: utter_opening_hours
+  - intent: thank_you
+  - action: utter_thank_you
 
 - story: user asks about opening hours
   steps:
     - intent: check_opening_hours
     - action: action_check_opening_hours
+    - intent: thank_you
+    - action: utter_thank_you
 
 - story: user asks about opening hours at a specific time
   steps:
     - intent: check_opening_hours_at_time
     - action: action_check_opening_hours_at_time
+    - intent: thank_you
+    - action: utter_thank_you
+
+- story: user asks to list the menu
+  steps:
+    - intent: list_menu
+    - action: action_list_menu
+    - intent: thank_you
+    - action: utter_thank_you

@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - thank_you
   - affirm
   - deny
   - mood_great
@@ -11,6 +12,7 @@ intents:
   - opening_hours
   - check_opening_hours
   - check_opening_hours_at_time
+  - list_menu
 
 entities:
   - day_of_week
@@ -31,6 +33,7 @@ slots:
 actions:
   - action_check_opening_hours
   - action_check_opening_hours_at_time
+  - action_list_menu
 
 responses:
   utter_greet:
@@ -38,7 +41,7 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.imgur.com/GQGcoyD.mp4"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -49,11 +52,21 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
+  utter_thank_you:
+  - text: "You're welcome :)"
+
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
   utter_opening_hours:
-  - text: "The restaurant is open at 10-20 every day"
+  - text: |
+      Monday: Open 8 AM, Close 8 PM
+      Tuesday: Open 8 AM, Close 8 PM
+      Wednesday: Open 10 AM, Close 4 PM
+      Thursday: Open 8 AM, Close 8 PM
+      Friday: Open 8 AM, Close 8 PM
+      Saturday: Open 10 AM, Close 4 PM
+      Sunday: Closed all day
 
 session_config:
   session_expiration_time: 60

@@ -50,6 +50,13 @@ stories:
     - intent: thank_you
     - action: utter_thank_you
 
+- story: user asks is restaurant open now
+  steps:
+    - intent: check_open_now
+    - action: action_check_open_now
+    - intent: thank_you
+    - action: utter_thank_you
+
 - story: user asks to list the menu
   steps:
     - intent: list_menu
@@ -61,6 +68,9 @@ stories:
   steps:
     - intent: place_order
     - action: action_place_order
+    - action: utter_ask_about_adds
+    - intent: confirm_adds
+    - action: action_confirm_adds
     - intent: thank_you
     - action: utter_thank_you
 
@@ -68,5 +78,8 @@ stories:
   steps:
     - intent: place_order_default_one_item
     - action: action_place_order_default_one_item
+    - action: utter_ask_about_adds
+    - intent: confirm_adds
+    - action: action_confirm_adds
     - intent: thank_you
     - action: utter_thank_you

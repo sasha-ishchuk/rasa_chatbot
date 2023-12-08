@@ -12,15 +12,19 @@ intents:
   - opening_hours
   - check_opening_hours
   - check_opening_hours_at_time
+  - check_open_now
   - list_menu
   - place_order
   - place_order_default_one_item
+  - confirm_adds
 
 entities:
   - day_of_week
   - time
   - quantity
   - dish_item
+  - type_of_extra_request
+  - extra_item
 
 slots:
   day_of_week:
@@ -43,17 +47,50 @@ slots:
     mappings:
       - type: from_entity
         entity: dish_item
+  type_of_extra_request:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: type_of_extra_request
+  extra_item:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: extra_item
 
 actions:
   - action_check_opening_hours
   - action_check_opening_hours_at_time
+  - action_check_open_now
   - action_list_menu
   - action_place_order
   - action_place_order_default_one_item
+  - action_confirm_adds
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: |
+      Ciao! Welcome to our cozy Italian restaurant.
+      You can ask me about:
+      - restaurant opening hours/days of week
+      - restaurant menu
+      - placing your order
+      - add some extras to your food
+      How may I help you?
+  - text: |
+      Hello and welcome! How can I help you?
+      You can ask me about:
+      - restaurant opening hours/days of week
+      - restaurant menu
+      - placing your order
+      - add some extras to your food
+  - text: |
+      Hello! Welcome to our restaurant :)
+      You can ask me about:
+      - opening hours/days of week
+      - menu
+      - place order
+      - add extras to order
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -64,12 +101,19 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "Wonderful :)"
+  - text: "Excellent!"
+  - text: "Awesome, carry on!"
 
   utter_goodbye:
   - text: "Bye"
+  - text: "See you!"
+  - text: "Ciao"
 
   utter_thank_you:
+  - text: "No problem"
   - text: "You're welcome :)"
+  - text: "Welcome."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -83,6 +127,28 @@ responses:
       Friday: Open 8 AM, Close 8 PM
       Saturday: Open 10 AM, Close 4 PM
       Sunday: Closed all day
+  - text: |
+      Monday: 8-20
+      Tuesday: 8-20
+      Wednesday: 10-16
+      Thursday: 8-20
+      Friday: 8-20
+      Saturday: 10-16
+      Sunday: closed
+  - text: |
+      Mon/Tue/Thu/Fri: 8-20
+      Wed/Sat: 10-16
+      Sunday: closed
+
+  utter_ask_about_adds:
+  - text: "Feel free to list your additional requests"
+  - text: "Any additions?"
+  - text: "Do you have a special requests?"
+
+  utter_ask_name:
+  - text: "What is your legal name?"
+  - text: "I need your legal name to place the order"
+  - text: "Please, write your legal name to confirm the order"
 
 session_config:
   session_expiration_time: 60

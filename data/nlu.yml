@@ -138,6 +138,23 @@ nlu:
     - Can I visit the restaurant at [8](time) on [Sunday](day_of_week)?
     - Restaurant is open on [Friday](day_of_week) at [23]:00(time)?
 
+- intent: check_open_now
+  examples: |
+    - Is the restaurant open right now?
+    - Can I visit the restaurant at this time?
+    - Are you guys still open?
+    - What time do you close today?
+    - Is it possible to dine in at the moment?
+    - What are your operating hours today?
+    - Are you open for business now?
+    - Could you tell me if you're still serving?
+    - I want to know if I can come by now.
+    - Are you accepting customers right now?
+    - What time will you be closing today?
+    - Can I dine in currently?
+    - Are you currently serving food?
+    - What are the hours of operation today?
+
 - synonym: Monday
   examples: |
     - Mondays
@@ -249,3 +266,23 @@ nlu:
     - Italian dessert
     - Coffee cake
     - Dessert
+
+- intent: confirm_adds
+  examples: |
+    - I want [extra](type_of_extra_request) [tomatoes](extra_item).
+    - Can I have [double](type_of_extra_request) [sauce](extra_item)?
+    - Add [more](type_of_extra_request) [cheese](extra_item), please.
+    - Could you include [extra](type_of_extra_request) [sauce](extra_item)?
+    - I'd like [additional](type_of_extra_request) [peppers](extra_item).
+    - How about [doubling](type_of_extra_request) the [olives](extra_item)?
+    - Please add [extra](type_of_extra_request) [onions](extra_item) to my order.
+    - Is it possible to get [extra](type_of_extra_request) [toppings](extra_item)?
+    - May I have [no](type_of_extra_request) [onion](extra_item) in my dish?
+    - I prefer [extra](type_of_extra_request) portions of [bacon](extra_item).
+    - I want [without](type_of_extra_request) [garlic](extra_item).
+
+- intent: save_order
+  examples: |
+    - [a-zA-Z]+
+    - [a-zA-Z]+ [a-zA-Z]+ 
+    - [a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+

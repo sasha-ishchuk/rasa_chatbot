@@ -22,6 +22,10 @@ pipeline:
      analyzer: char_wb
      min_ngram: 1
      max_ngram: 4
+   - name: CountVectorsFeaturizer
+     analyzer: char
+     min_ngram: 3
+     max_ngram: 5
    - name: DIETClassifier
      epochs: 100
      constrain_similarities: true

@@ -1,0 +1,18 @@
+version: "3.1"
+
+nlu:
+- intent: list_menu
+  examples: |
+    - What items are on the menu?
+    - Show me the menu, please.
+    - Can you list the menu options?
+    - What dishes do you serve?
+    - I'd like to know what's on the menu.
+    - What are the available food choices?
+    - Show me what I can order.
+    - Can you tell me about your menu?
+    - I'm interested in seeing the menu items.
+    - What kind of food do you offer?
+    - Can you provide information about your menu's pricing?
+    - What is on menu?
+    - Show me menu?

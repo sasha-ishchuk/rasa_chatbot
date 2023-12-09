@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+- intent: confirm_adds
+  examples: |
+    - I want [extra](type_of_extra_request) [tomatoes](extra_item).
+    - Can I have [double](type_of_extra_request) [sauce](extra_item)?
+    - Add [more](type_of_extra_request) [cheese](extra_item), please.
+    - Could you include [extra](type_of_extra_request) [sauce](extra_item)?
+    - I'd like [additional](type_of_extra_request) [peppers](extra_item).
+    - How about [doubling](type_of_extra_request) the [olives](extra_item)?
+    - Please add [extra](type_of_extra_request) [onions](extra_item) to my order.
+    - Is it possible to get [extra](type_of_extra_request) [toppings](extra_item)?
+    - May I have [no](type_of_extra_request) [onion](extra_item) in my dish?
+    - I prefer [extra](type_of_extra_request) portions of [bacon](extra_item).
+    - I want [without](type_of_extra_request) [garlic](extra_item).
+    - [no](type_of_extra_request) [onion](extra_item), please.
+    - [without](type_of_extra_request) [pepper](extra_item), pls
+    - [non](type_of_extra_request) [onion](extra_item), please.
+    - [onion](extra_item) [free](type_of_extra_request), please.
+
+- lookup: type_of_extra_request
+  examples: | 
+    - /data/txt/extra_keywords.txt
+
+- lookup: extra_item
+  examples: | 
+    - /data/txt/available_extras.txt

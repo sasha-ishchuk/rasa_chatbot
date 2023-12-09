@@ -1,0 +1,72 @@
+version: "3.1"
+
+nlu:
+- intent: place_order
+  examples: |
+    - I want [2](quantity) [Hot-dog](dish_item).
+    - Can I order a [Pizza](dish_item)?
+    - Place an order for [3](quantity) [Burger](dish_item).
+    - I'd like to get [7](quantity) [Spaghetti Carbonara](dish_item).
+    - I need [1](quantity) [Tiramisu](dish_item)
+
+- intent: place_order_default_one_item
+  examples: |
+    - I want [Hot-dog](dish_item).
+    - Can I order a [Pizza](dish_item)?
+    - Place an order for [Burger](dish_item).
+    - I'd like to get [Spaghetti Carbonara](dish_item).
+    - I need [Tiramisu](dish_item)
+
+- regex: quantity
+  examples: |
+    - [0-9]+
+
+- synonym: Lasagne
+  examples: |
+    - Lasagne
+    - Lasagna
+    - Lasagnes
+    - Lasagnas
+
+- synonym: Pizza
+  examples: |
+    - Pizza
+    - Pizzas
+    - Pizz
+
+- synonym: Hot-dog
+  examples: |
+    - Hot-dog
+    - Hotdog
+    - Hot-dogs
+    - Hotdogs
+    - Sausage Sandwich
+
+- synonym: Burger
+  examples: |
+    - Burger
+    - Brger
+    - Burgr
+    - Burgers
+    - Hamburger
+    - Cheeseburger
+
+- synonym: Spaghetti Carbonara
+  examples: |
+    - Spaghetti Carbonara
+    - Carbonara
+    - Carbonaras
+    - Spaghetti
+    - Spageti
+    - Spageti carbonara
+    - Pasta
+    - Pasta Carbonara
+
+- synonym: Tiramisu
+  examples: |
+    - Tiramisu
+    - Tiramisoo
+    - Teramisu
+    - Italian dessert
+    - Coffee cake
+    - Dessert

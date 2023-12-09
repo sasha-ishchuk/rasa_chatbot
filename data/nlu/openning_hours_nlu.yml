@@ -1,0 +1,99 @@
+version: "3.1"
+
+nlu:
+- intent: opening_hours
+  examples: |
+    - what time does the restaurant open?
+    - when does the restaurant start serving?
+    - what are the restaurant's opening hours?
+    - what time does the restaurant close?
+    - when does the restaurant close for the day?
+    - what time can I visit the restaurant?
+    - tell me opening hours?
+    - when the restaurant is open?
+    - opening hours?
+
+- intent: check_opening_hours
+  examples: |
+    - Is the restaurant open on [Sundays](day_of_week)?
+    - What are the opening hours [today](day_of_week)?
+    - Can I visit the restaurant on [Mondays](day_of_week)?
+    - Tell me if the restaurant is open this [Thursday](day_of_week).
+
+- intent: check_opening_hours_at_time
+  examples: |
+    - Is the restaurant open at [15](time) on [Monday](day_of_week)?
+    - Can I visit the restaurant at [8](time) on [Sunday](day_of_week)?
+    - Restaurant is open on [Friday](day_of_week) at [23]:00(time)?
+
+- intent: check_open_now
+  examples: |
+    - Is the restaurant open right now?
+    - Can I visit the restaurant at this time?
+    - Are you guys still open?
+    - What time do you close today?
+    - Is it possible to dine in at the moment?
+    - What are your operating hours today?
+    - Are you open for business now?
+    - Could you tell me if you're still serving?
+    - I want to know if I can come by now.
+    - Are you accepting customers right now?
+    - What time will you be closing today?
+    - Can I dine in currently?
+    - Are you currently serving food?
+    - What are the hours of operation today?
+
+- regex: quantity
+  examples: |
+    - ^(0?[0-9]|1[0-9]|2[0-3])$
+
+- synonym: Monday
+  examples: |
+    - Mondays
+    - Monday
+    - Mnday
+    - Mon
+
+- synonym: Tuesday
+  examples: |
+    - Tuesdays
+    - Tuesday
+    - Tusday
+    - Tue
+
+- synonym: Wednesday
+  examples: |
+    - Wednesdays
+    - Wednesday
+    - Wensday
+    - Wen
+
+- synonym: Thursday
+  examples: |
+    - Thursdays
+    - Thursday
+    - Thusday
+    - Thu
+
+- synonym: Friday
+  examples: |
+    - Fridays
+    - Friday
+    - Freeday
+    - Fryday
+    - Fri
+
+- synonym: Saturday
+  examples: |
+    - Saturdays
+    - Saturday
+    - Satuday
+    - Satyrday
+    - Sat
+
+- synonym: Sunday
+  examples: |
+    - Sundays
+    - Sunday
+    - Sanday
+    - San

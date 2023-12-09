@@ -2,84 +2,100 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
 
-- story: sad path 1
+- story: welcome in the restaurant
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: what_you_can_do
+  - action: utter_how_can_help
+  - intent: want_order
+  - action: utter_ask_order
 
-- story: sad path 2
+- story: see you soon
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: thanks for help
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
 
 - story: when restaurant is open
   steps:
   - intent: opening_hours
   - action: utter_opening_hours
-  - intent: thank_you
-  - action: utter_thank_you
 
 - story: user asks about opening hours
   steps:
     - intent: check_opening_hours
     - action: action_check_opening_hours
-    - intent: thank_you
-    - action: utter_thank_you
 
 - story: user asks about opening hours at a specific time
   steps:
     - intent: check_opening_hours_at_time
     - action: action_check_opening_hours_at_time
-    - intent: thank_you
-    - action: utter_thank_you
 
 - story: user asks is restaurant open now
   steps:
     - intent: check_open_now
     - action: action_check_open_now
-    - intent: thank_you
-    - action: utter_thank_you
 
 - story: user asks to list the menu
   steps:
     - intent: list_menu
     - action: action_list_menu
-    - intent: thank_you
-    - action: utter_thank_you
 
 - story: user wants to order some food
   steps:
     - intent: place_order
     - action: action_place_order
     - action: utter_ask_about_adds
-    - intent: confirm_adds
-    - action: action_confirm_adds
-    - intent: thank_you
-    - action: utter_thank_you
 
 - story: user wants to order some food without specified quantity
   steps:
     - intent: place_order_default_one_item
     - action: action_place_order_default_one_item
     - action: utter_ask_about_adds
+
+- story: user want some extras
+  steps:
     - intent: confirm_adds
     - action: action_confirm_adds
-    - intent: thank_you
-    - action: utter_thank_you
+
+- story: user do not order anything
+  steps:
+    - intent: deny
+    - action: utter_order_cancelled
+
+- story: user confirm order
+  steps:
+    - intent: confirm_order
+    - action: utter_order_confirmed

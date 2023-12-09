@@ -1,0 +1,148 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - bey
+    - see you
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: thank_you
+  examples: |
+    - Thanks a lot!
+    - Thank you very much!
+    - I appreciate your help!
+    - Thank you so much for your assistance!
+    - Thanks for that!
+    - I'm grateful for your support!
+    - I want to express my thanks!
+    - Many thanks for your help!
+    - Thank you
+    - Thnx
+    - Thanks
+    - I'm so grateful!
+    - Big thank you!
+    - That's very kind of you, thank you!
+    - Much obliged!
+    - Thanks a bunch!
+    - I'm thankful for your time!
+    - Thank you for everything!
+    - I'm grateful for your input!
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: what_you_can_do
+  examples: |
+    - How can you help me?
+    - What you can do?
+    - What can you do for me?
+    - Can you assist me with something?
+    - How are you useful to me?
+    - What help can I get from you?
+    - Can you do anything for me?
+    - What are your abilities to assist me?
+    - How can you support me?
+    - What kind of support do you offer?
+    - Do you have any services for me?
+
+- intent: want_order
+  examples: |
+    - I want to place an order.
+    - Can I order something?
+    - I'd like to make a purchase.
+    - How can I buy from you?
+    - I want to get something from restaurant.
+    - Can you help me order?
+    - Please assist me in placing an order.
+    - I want to order.
+    - I'd like to order some food.
+    - Is it possible to order from this chatbot?
+
+- intent: confirm_order
+  examples: |
+    - c
+    - confirm
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

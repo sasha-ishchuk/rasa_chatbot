@@ -9,6 +9,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - what_you_can_do
+  - want_order
+  - confirm_order
   - opening_hours
   - check_opening_hours
   - check_opening_hours_at_time
@@ -71,26 +74,52 @@ responses:
   utter_greet:
   - text: |
       Ciao! Welcome to our cozy Italian restaurant.
-      You can ask me about:
-      - restaurant opening hours/days of week
-      - restaurant menu
-      - placing your order
-      - add some extras to your food
       How may I help you?
   - text: |
-      Hello and welcome! How can I help you?
-      You can ask me about:
-      - restaurant opening hours/days of week
-      - restaurant menu
-      - placing your order
-      - add some extras to your food
+      Hello and welcome to our trattoria!
+      How can I help you?
   - text: |
-      Hello! Welcome to our restaurant :)
+      Happy to see you! Welcome to our restaurant :)
+      What I can do for you?
+  - text: |
+      Hello! Welcome to our place!
+      How may I help you?
+
+  utter_how_can_help:
+  - text: |
       You can ask me about:
       - opening hours/days of week
       - menu
       - place order
       - add extras to order
+  - text: |
+      You can ask me about:
+      - restaurant opening hours/days of week
+      - restaurant menu
+      - placing your order
+      - add some extras to your food
+  - text: |
+      You can ask me about:
+      - restaurant opening hours/days of week
+      - restaurant menu
+      - placing your order
+      - add some extras to your food
+
+  utter_ask_order:
+  - text: "Type your order or 'no'."
+  - text: "Enter your request or select 'no'."
+  - text: "Input your order or choose 'no'."
+
+  utter_order_cancelled:
+  - text: "Okay, no problem. If you change your mind, feel free to ask!"
+  - text: "Alright, if you change your mind, I'm here to help with your order!"
+  - text: "Okay, no problem. If you need anything else or want to order later, feel free to ask!"
+  - text: "Got it. If you have any other requests or wish to order later, don't hesitate to ask!"
+
+  utter_order_confirmed:
+    - text: "Super! Your order confirmed."
+    - text: "Great choice! Your order has been confirmed."
+    - text: "Wonderful! Your order is now confirmed."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -141,14 +170,15 @@ responses:
       Sunday: closed
 
   utter_ask_about_adds:
-  - text: "Feel free to list your additional requests"
-  - text: "Any additions?"
-  - text: "Do you have a special requests?"
-
-  utter_ask_name:
-  - text: "What is your legal name?"
-  - text: "I need your legal name to place the order"
-  - text: "Please, write your legal name to confirm the order"
+  - text: |
+      Feel free to list your additional requests:) Or order more food :)
+      If no, type 'c' to confirm the order.
+  - text: |
+      Something more or any additions? 
+      If no, type 'c' to confirm the order
+  - text: |
+      Do you want order something more or maybe you have a special requests?
+      If no, type 'c' to confirm the order
 
 session_config:
   session_expiration_time: 60

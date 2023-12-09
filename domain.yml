@@ -69,6 +69,7 @@ actions:
   - action_place_order
   - action_place_order_default_one_item
   - action_confirm_adds
+  - action_order_confirmed
 
 responses:
   utter_greet:
@@ -115,11 +116,6 @@ responses:
   - text: "Alright, if you change your mind, I'm here to help with your order!"
   - text: "Okay, no problem. If you need anything else or want to order later, feel free to ask!"
   - text: "Got it. If you have any other requests or wish to order later, don't hesitate to ask!"
-
-  utter_order_confirmed:
-    - text: "Super! Your order confirmed."
-    - text: "Great choice! Your order has been confirmed."
-    - text: "Wonderful! Your order is now confirmed."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"

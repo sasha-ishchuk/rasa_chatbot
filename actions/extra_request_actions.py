@@ -4,6 +4,12 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+import os
+
+from save_order import overwrite_orders_with_new_order, append_to_last_order_note
+
+file_path = 'data/user_order/user_order.json'
+
 
 class ConfirmAdds(Action):
     extra_keywords = Path("data/txt/extra_keywords.txt").read_text().split("\n")
@@ -28,6 +34,12 @@ class ConfirmAdds(Action):
             item_present = True
 
         if item_present and add:
+            if not os.path.exists(file_path):
+                overwrite_orders_with_new_order()
+
+            note = add_type + " " + extra_item
+            append_to_last_order_note(note)
+
             dispatcher.utter_message(f"Your order updated. Added note: '{add_type} {extra_item}'.\n")
         elif not item_present:
             dispatcher.utter_message(text="Sorry... We don't have this extra item")

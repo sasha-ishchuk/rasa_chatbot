@@ -89,6 +89,7 @@ stories:
   steps:
     - intent: confirm_adds
     - action: action_confirm_adds
+    - action: utter_ask_about_adds
 
 - story: user do not order anything
   steps:
@@ -98,4 +99,4 @@ stories:
 - story: user confirm order
   steps:
     - intent: confirm_order
-    - action: utter_order_confirmed
+    - action: action_order_confirmed

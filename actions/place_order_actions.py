@@ -5,6 +5,12 @@ from typing import Any, Text, Dict, List, Tuple
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+import os
+
+from save_order import overwrite_orders_with_new_order, append_to_last_order_items
+
+file_path = 'data/user_order/user_order.json'
+
 
 class ActionPlaceOrder(Action):
     menu_data = json.loads(Path("data/menu.json").read_text())
@@ -21,6 +27,12 @@ class ActionPlaceOrder(Action):
 
         if dish_item:
             total_price, total_time = self.calculate_order(dish_item, quantity)
+            if not os.path.exists(file_path):
+                overwrite_orders_with_new_order()
+
+            item = dish_item + " - " + str(quantity)
+            append_to_last_order_items(item, total_price, total_time)
+
             dispatcher.utter_message(
                 f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
                 f"Time to prepare: {total_time} hour(s). \n")
@@ -58,6 +70,13 @@ class ActionPlaceOrderDefaultOneItem(Action):
 
         if dish_item:
             total_price, total_time = self.calculate_order(dish_item)
+
+            if not os.path.exists(file_path):
+                overwrite_orders_with_new_order()
+
+            item = dish_item + " - " + str(quantity)
+            append_to_last_order_items(item, total_price, total_time)
+
             dispatcher.utter_message(
                 f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
                 f"Time to prepare: {total_time} hour(s). \n")

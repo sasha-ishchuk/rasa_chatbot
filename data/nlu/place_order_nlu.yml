@@ -5,7 +5,7 @@ nlu:
   examples: |
     - I want [2](quantity) [Hot-dog](dish_item).
     - I want [7](quantity) [Lasagne](dish_item).
-    - Can I order a [Pizza](dish_item)?
+    - Can I order [3](quantity) [Pizza](dish_item)?
     - [5](quantity) [Hotdog](dish_item), please
     - Place an order for [3](quantity) [Burger](dish_item).
     - I'd like to get [7](quantity) [Spaghetti Carbonara](dish_item).

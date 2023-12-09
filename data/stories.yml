@@ -51,7 +51,7 @@ stories:
 - story: when restaurant is open
   steps:
   - intent: opening_hours
-  - action: utter_opening_hours
+  - action: action_list_opening_hours
 
 - story: user asks about opening hours
   steps:

@@ -83,6 +83,12 @@ Get your url using ngrok with command:
 ngrok http 5005
 ```
 
+run actions and rasa chatbot (possibly you need to run these commands in 2 terminals):
+```
+rasa run actions
+rasa run
+```
+
 
 ### Conversation example:
 ```

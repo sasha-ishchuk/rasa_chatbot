@@ -48,6 +48,7 @@ nlu:
 - synonym: Burger
   examples: |
     - Burger
+    - Borger
     - Brger
     - Burgr
     - Burgers

@@ -12,6 +12,30 @@ nlu:
     - tell me opening hours?
     - when the restaurant is open?
     - opening hours?
+    - when oes het restaurant start serving?
+    - when oes the restaurant sttart serving?
+    - when doses eth restaurant start serving?
+    - what are the restaurant's pening ?sruoh
+    - what are thee restaurant's opgening hours?
+    - whatt are the restaurant's gninepo hours?
+    - what time seod the restaurant close?
+    - what ime does the restaurant close?
+    - what time does the restaurant close??
+    - when does the urtesaanrt close forr he day?
+    - when doses the restaurant clos or the day?
+    - whenn does eht restaurant close for the day?
+    - what time can I visit the restaurant?
+    - what time can I visit eht te?snuatarr
+    - tahw time cna I tisiv the restaurant?
+    - tell me opening hours?
+    - tell me opening hours?
+    - tell me opening hours?
+    - when the restaurant is open?
+    - when eht restaurant is pen?
+    - when eht retstaurant is open?
+    - opgening hours?
+    - openin ho?urs?
+    - gninepo hours??
 
 - intent: check_opening_hours
   examples: |
@@ -30,18 +54,37 @@ nlu:
   examples: |
     - Is the restaurant open right now?
     - Can I visit the restaurant at this time?
-    - Are you guys still open?
-    - What time do you close today?
+    - Are you guys now open?
     - Is it possible to dine in at the moment?
-    - What are your operating hours today?
     - Are you open for business now?
-    - Could you tell me if you're still serving?
     - I want to know if I can come by now.
     - Are you accepting customers right now?
-    - What time will you be closing today?
     - Can I dine in currently?
     - Are you currently serving food?
-    - What are the hours of operation today?
+    - Can I tisiv the restaurant at thi time?
+    - Ca I visit thee restaurant at this time?
+    - Ca I visit eht restaurant at this time?
+    - Are you guys noww ?nepo
+    - re you guys now open?
+    - Are youu guys now open?
+    - Is it possible to dine in at the moment
+    - Is it ossible to enid in at the ?tnemom
+    - Is it possibl to dine in at thee moment?
+    - Are you open for ssenisub now?
+    - re youu open for business now
+    - erA you opnen for business now?
+    - I watnt to know if I can come by now..
+    - I want to now if I cann come by now
+    - I want to kwon if I can come by now.
+    - erA you acgcepting customers right ow?
+    - Are you accepting customers right now?
+    - Are you accepting customers right now?
+    - Can I dine in currently?
+    - Can I dine in currently?
+    - Can I dine in currently?
+    - Aree you currently servingg food?
+    - Are you currently erving food?
+    - Ar youu currently serving food?
 
 - regex: quantity
   examples: |

@@ -21,3 +21,5 @@ and ordering the food.
 * Secondary intents, like greeting or farewell, are handled as well.
 * Integrated with Telegram messenger.
 
+
+### Integrate with Telegram:

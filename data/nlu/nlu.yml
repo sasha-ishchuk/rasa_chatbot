@@ -87,6 +87,36 @@ nlu:
     - How can you support me?
     - What kind of support do you offer?
     - Do you have any services for me?
+    - What you can do?
+    - What ou can do?
+    - What you can ?od
+    - hat can yo do for me?
+    - hat can you do forr me?
+    - What can you do for me?
+    - Can you tsissa me with something?
+    - naC you assist me with something?
+    - Cann you astsist me with something?
+    - How are you useful to me?
+    - Howw era you usefull to me?
+    - How are yo usleful to me?
+    - What help can I get from you?
+    - What help can I teg from you?
+    - What help can I et from you?
+    - Ca you do anything for me?
+    - Can youu do angything or me?
+    - Can you do anything fo me??
+    - What aree your abilities to assist me?
+    - What are your abilities to assist m?e
+    - What aree your abilitie to assis me?
+    - Hwo can you support m?e
+    - How can uoy support e?
+    - How can you support me?
+    - What dikn of upport do you ?reffo
+    - What kidnd of support do you offer?
+    - ahWt kind of support do you offer?
+    - Do yo have any secivres orf me?
+    - Do youu have anyy services rfo me?
+    - Do you have any services for me??
 
 - intent: want_order
   examples: |
@@ -100,6 +130,33 @@ nlu:
     - I want to order.
     - I'd like to order some food.
     - Is it possible to order from this chatbot?
+    - Can I order something?
+    - Can I orde something
+    - naC I order something??
+    - I'd like to make a purchase.
+    - d'I like to make a uacehs.pr
+    - I'd likee to maeke a purchase
+    - How ca I yub from you?
+    - How can I buy fro you?
+    - How an I buy fromm you?
+    - I want to get something rofm restaurant
+    - I want to get something from restaurant.
+    - I want to gett something frmo re.staurant.
+    - an youu help me order?
+    - Can you help me order?
+    - Can you hel me order?
+    - Pleease assist me in placing an rder.
+    - lease assist me in placing an order.
+    - Pleasee sasits me in placing an order.
+    - I want to order.
+    - I ant to order.
+    - I want to order.
+    - I'd like to order emos food..
+    - I'dd ekil to order some food..
+    - I'd like to orderr some food.
+    - Is it possible to order from this chatbot?
+    - Is it possible to orderr from this chatbot?
+    - Is it possible to rder from sith chatbot
 
 - intent: confirm_order
   examples: |

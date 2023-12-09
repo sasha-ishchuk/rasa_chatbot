@@ -2,6 +2,10 @@ Rasa based chatbot, which is able to handle
 customers writing to the restaurant, looking for information 
 and ordering the food. 
 
+### Link to demos: 
+* Telegram demo: https://drive.google.com/file/d/1G-ER6rMzGwPSQX9ePLAllpzX8Eqo3-8S/view?usp=sharing
+* How typos generator works demo: https://drive.google.com/file/d/1bQD8cO6MLGtEHF5YwrS3QM60OHHulV2f/view?usp=sharing
+
 ### Chatbot is able to handle those interactions:
 
 * Answer the question if the restaurant is open on a given day of week/time.

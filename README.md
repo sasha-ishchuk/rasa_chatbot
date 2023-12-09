@@ -1,6 +1,4 @@
-Rasa based chatbot, which is able to handle 
-customers writing to the restaurant, looking for information 
-and ordering the food. 
+Rasa based chatbot, which is able to handle customers writing to the restaurant, looking for information and ordering the food. 
 
 ### Link to demos: 
 * Telegram demo: https://drive.google.com/file/d/1G-ER6rMzGwPSQX9ePLAllpzX8Eqo3-8S/view?usp=sharing

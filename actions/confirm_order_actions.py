@@ -4,6 +4,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
+import os
 import json
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
@@ -39,5 +40,8 @@ class ActionOrderConfirmed(Action):
             dispatcher.utter_message(f"File '{file_path}' not found.")
         except json.JSONDecodeError:
             dispatcher.utter_message(f"Error decoding JSON in '{file_path}'.")
+        finally:
+            file.close()
+            os.remove(file_path)
 
         return []

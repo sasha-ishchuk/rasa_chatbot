@@ -13,7 +13,9 @@ and ordering the food.
 ### Additional features:
 
 * Retrieve information about opening hours and menu from .json files.
-* Process the order and confirm purchased meals, as well as additional requests (save order to .json file). 
+* Process the order and confirm purchased meals, as well as additional requests.
+  - save order to user_order.json file (temporary file)
+  - when user confirm the order temporary file is deleted
 * Confirm when the meal will be available as a pick-up in the restaurant. 
 * Simple generator, to create the training data with some common typos and language mistakes. 
 * Secondary intents, like greeting or farewell, are handled as well.

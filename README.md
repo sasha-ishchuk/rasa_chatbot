@@ -17,7 +17,10 @@ and ordering the food.
   - save order to user_order.json file (temporary file)
   - when user confirm the order temporary file is deleted
 * Confirm when the meal will be available as a pick-up in the restaurant. 
-* Simple generator, to create the training data with some common typos and language mistakes. 
+* Simple generator, to create the training data with some common typos and language mistakes.
+  - to use the generator you must put the parameters 'file_name' and 'intent_name'
+  - script takes all example from the intent and generate 3 variants with mistakes for each example
+  - results are printed to stdout, so you can copy/paste it to the intent
 * Secondary intents, like greeting or farewell, are handled as well.
 * Integrated with Telegram messenger.
 

@@ -22,7 +22,10 @@ class ActionPlaceOrder(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        quantity = int(tracker.get_slot("quantity"))
+        q = tracker.get_slot("quantity")
+        quantity = 1
+        if q is not None:
+            quantity = int(q)
         dish_item = tracker.get_slot("dish_item")
 
         if dish_item:

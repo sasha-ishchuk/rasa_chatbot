@@ -30,7 +30,7 @@ class ActionOrderConfirmed(Action):
                         dispatcher.utter_message(f"Items: {', '.join(order['items'])}")
                         dispatcher.utter_message(f"Price: {order['price']} USD")
                         dispatcher.utter_message(f"Additional Notes: {', '.join(order['additional_notes'])}\n")
-                        dispatcher.utter_message(text="")
+                        dispatcher.utter_message(text="---")
                         dispatcher.utter_message(f"Pick-up your order in {order['time']} hours")
                 else:
                     dispatcher.utter_message("No orders found.")

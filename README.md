@@ -172,10 +172,3 @@ Your input ->  bey
 
 Ciao
 ```
-
-### Conversation example (Telegram screens:
-
-![chatbot1](https://drive.google.com/file/d/1Syq_fMTTFFylxc_nYE5tSKZHEpHItIP1/view?usp=sharing)  
-![chatbot2](https://drive.google.com/file/d/1jEiI6lazdMJqZxZFdwBFGKGLngbubjJZ/view?usp=sharing)  
-![chatbot3](https://drive.google.com/file/d/1BwQxM6Y8l5i_IQ57zqS5wvus5SkzJcN3/view?usp=sharing)  
-![chatbot4](https://drive.google.com/file/d/1HRKhpM6T1qZZiiIWbsMwDPvIX718ghHu/view?usp=sharing)

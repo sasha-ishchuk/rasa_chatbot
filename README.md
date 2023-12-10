@@ -23,7 +23,8 @@ Rasa based chatbot, which is able to handle customers writing to the restaurant,
   - to use the generator you must put the parameters 'file_name' and 'intent_name'
   - script takes all example from the intent and generate 3 variants with mistakes for each example
   - results are printed to stdout, so you can copy/paste it to the intent
-* Secondary intents, like greeting or farewell, are handled as well.
+* Secondary intents, like greeting, are handled as well.
+* Chatbot ask and confirm the delivery address.
 * Integrated with Telegram messenger.
 
 

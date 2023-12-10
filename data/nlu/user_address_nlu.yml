@@ -1,0 +1,26 @@
+version: "3.1"
+
+nlu:
+- intent: give_address
+  examples: |
+    - My address is [123 Main Street](address).
+    - You can deliver it to [456 Elm Avenue](address).
+    - Deliver to [789 Oak Lane](address), please.
+    - I live at [101 Pine Street](address).
+    - The address for delivery is [555 Maple Road](address).
+    - Please send it to [777 Cedar Av](address).
+    - Here's my address: [888 Birch St](address).
+    - You can ship it to [999 Walnut Drive](address).
+    - [Zabiniec 75/29](address)
+    - My address [Sliska 125/88](address)
+    - Here it is [Waska 67B](address)
+    - [Sliska 25](address)
+    - It's [Road St. 25](address).
+    - Ship to [Manchester St. 17B](address).
+    - I can be found at [Ocean View 45](address).
+    - It's located at [Sunset Blvd 123](address).
+    - [Lakeside Avenue 10](address) is where it's going.
+    - My residence is [Park Lane 30](address).
+    - The location is [Hillcrest 5](address).
+    - [46 Lake](address).
+    - Deliver to [Main 25 St](address), please.

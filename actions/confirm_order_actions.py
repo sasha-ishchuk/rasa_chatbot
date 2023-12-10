@@ -62,3 +62,22 @@ class ActionDeleteUnconfirmedOrder(Action):
             dispatcher.utter_message("Your order wasn't placed...")
 
         return []
+
+
+class ActionConfirmAddress(Action):
+    def name(self) -> Text:
+        return "action_confirm_address"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        address = tracker.get_slot("address")
+
+        if address is None:
+            dispatcher.utter_message(text="Sorry. We don't deliver for to this place. \nWait for you to pick-up your "
+                                          "order.")
+        else:
+            dispatcher.utter_message(f"Your order will be delivered to {address}")
+
+        return []

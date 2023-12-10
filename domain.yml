@@ -20,6 +20,7 @@ intents:
   - place_order
   - place_order_default_one_item
   - confirm_adds
+  - give_address
 
 entities:
   - day_of_week
@@ -28,6 +29,7 @@ entities:
   - dish_item
   - type_of_extra_request
   - extra_item
+  - address
 
 slots:
   day_of_week:
@@ -60,6 +62,11 @@ slots:
     mappings:
       - type: from_entity
         entity: extra_item
+  address:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: address
 
 actions:
   - action_check_opening_hours
@@ -72,6 +79,7 @@ actions:
   - action_confirm_adds
   - action_order_confirmed
   - action_delete_unconfirmed_order
+  - action_confirm_address
 
 responses:
   utter_greet:
@@ -142,6 +150,21 @@ responses:
   - text: |
       Do you want order something more or maybe you have a special requests?
       If no, type 'c' to confirm the order
+
+  utter_need_delivery:
+    - text: "Do you want your order delivered to your home?"
+    - text: "Do you prefer delivery to your home?"
+    - text: "Are you requesting delivery to your house?"
+
+  utter_ask_address:
+    - text: "Please provide your delivery address."
+    - text: "We need your address for delivery. Could you please share it?"
+    - text: "To complete your order, we require your address. Kindly provide it."
+
+  utter_pick_up_order:
+    - text: "Ok, waiting you pick-up your order."
+    - text: "Fine, we'll be wait for you to pick-up the order."
+    - text: "Sure, expecting your order pickup."
 
 session_config:
   session_expiration_time: 60

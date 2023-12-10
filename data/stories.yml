@@ -83,7 +83,22 @@ stories:
     - action: action_delete_unconfirmed_order
     - action: utter_order_cancelled
 
-- story: user confirm order
+- story: user confirm order with delivery
   steps:
     - intent: confirm_order
     - action: action_order_confirmed
+    - action: utter_need_delivery
+    - intent: affirm
+    - action: utter_ask_address
+    - intent: give_address
+      entities:
+        - address: Zabiniec 75/29
+    - action: action_confirm_address
+
+- story: user confirm order without delivery
+  steps:
+    - intent: confirm_order
+    - action: action_order_confirmed
+    - action: utter_need_delivery
+    - intent: deny
+    - action: utter_pick_up_order

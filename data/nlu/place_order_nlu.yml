@@ -19,6 +19,7 @@ nlu:
     - Place an order for [Burger](dish_item).
     - I'd like to get [Spaghetti Carbonara](dish_item).
     - I need [Tiramisu](dish_item)
+    - [Spaghetti] (dish_item)
 
 - regex: quantity
   examples: |

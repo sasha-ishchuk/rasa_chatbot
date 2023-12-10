@@ -41,9 +41,9 @@ class ConfirmAdds(Action):
             append_to_last_order_note(note)
 
             dispatcher.utter_message(f"Your order updated. Added note: '{add_type} {extra_item}'.\n")
-        elif not item_present:
-            dispatcher.utter_message(text="Sorry... We don't have this extra item")
         elif not add and not item_present:
             dispatcher.utter_message(text="Sorry... I don't understood your needs :(")
+        elif not item_present:
+            dispatcher.utter_message(text="Sorry... We don't have this extra item")
 
         return []

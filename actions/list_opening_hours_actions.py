@@ -19,7 +19,10 @@ class ListMenu(Action):
         open_list = "\nOur opening hours:\n"
 
         for day, hours in self.open_hours_data['items'].items():
-            open_list += f"{day}: {hours['open']} - {hours['close']}\n"
+            if hours['open'] == hours['close']:
+                open_list += f"{day}: CLOSED\n"
+            else:
+                open_list += f"{day}: {hours['open']} - {hours['close']}\n"
 
         dispatcher.utter_message(text=open_list)
 

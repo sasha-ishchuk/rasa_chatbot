@@ -33,12 +33,15 @@ class ActionPlaceOrder(Action):
             if not os.path.exists(file_path):
                 overwrite_orders_with_new_order()
 
-            item = dish_item + " - " + str(quantity)
-            append_to_last_order_items(item, total_price, total_time)
+            if total_time == 0 and total_price == 0:
+                dispatcher.utter_message(f"Sorry, we don't have {dish_item} in our menu. \n")
+            else:
+                item = dish_item + " - " + str(quantity)
+                append_to_last_order_items(item, total_price, total_time)
 
-            dispatcher.utter_message(
-                f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
-                f"Time to prepare: {total_time} hour(s). \n")
+                dispatcher.utter_message(
+                    f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
+                    f"Time to prepare: {total_time} hour(s). \n")
 
         return []
 
@@ -77,12 +80,15 @@ class ActionPlaceOrderDefaultOneItem(Action):
             if not os.path.exists(file_path):
                 overwrite_orders_with_new_order()
 
-            item = dish_item + " - " + str(quantity)
-            append_to_last_order_items(item, total_price, total_time)
+            if total_time == 0 and total_price == 0:
+                dispatcher.utter_message(f"Sorry, we don't have {dish_item} in our menu. \n")
+            else:
+                item = dish_item + " - " + str(quantity)
+                append_to_last_order_items(item, total_price, total_time)
 
-            dispatcher.utter_message(
-                f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
-                f"Time to prepare: {total_time} hour(s). \n")
+                dispatcher.utter_message(
+                    f"The order for {quantity} {dish_item}(s) is placed. Total price: ${total_price}. \n"
+                    f"Time to prepare: {total_time} hour(s). \n")
         return []
 
     def calculate_order(self, item: Text) -> Tuple[float, float]:

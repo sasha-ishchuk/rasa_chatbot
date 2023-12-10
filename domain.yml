@@ -71,6 +71,7 @@ actions:
   - action_place_order_default_one_item
   - action_confirm_adds
   - action_order_confirmed
+  - action_delete_unconfirmed_order
 
 responses:
   utter_greet:
@@ -108,28 +109,15 @@ responses:
       - add some extras to your food
 
   utter_ask_order:
-  - text: "Type your order or 'no'."
-  - text: "Enter your request or select 'no'."
-  - text: "Input your order or choose 'no'."
+  - text: "Type your order or 'no' (previous order will be deleted)."
+  - text: "Enter your request or select 'no' (earlier request will be removed)."
+  - text: "Input your order or choose 'no' (previous order will be removed)."
 
   utter_order_cancelled:
   - text: "Okay, no problem. If you change your mind, feel free to ask!"
   - text: "Alright, if you change your mind, I'm here to help with your order!"
   - text: "Okay, no problem. If you need anything else or want to order later, feel free to ask!"
   - text: "Got it. If you have any other requests or wish to order later, don't hesitate to ask!"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/GQGcoyD.mp4"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-  - text: "Wonderful :)"
-  - text: "Excellent!"
-  - text: "Awesome, carry on!"
 
   utter_goodbye:
   - text: "Bye"

@@ -2,33 +2,6 @@ version: "3.1"
 
 stories:
 
-#- story: happy path
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_great
-#  - action: utter_happy
-#
-#- story: sad path 1
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - intent: affirm
-#  - action: utter_happy
-#
-#- story: sad path 2
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - intent: deny
-#  - action: utter_goodbye
-
 - story: welcome in the restaurant
   steps:
   - intent: greet
@@ -56,11 +29,16 @@ stories:
 - story: user asks about opening hours
   steps:
     - intent: check_opening_hours
+      entities:
+        - day_of_week: Monday
     - action: action_check_opening_hours
 
 - story: user asks about opening hours at a specific time
   steps:
     - intent: check_opening_hours_at_time
+      entities:
+        - time: 15
+        - day_of_week: Monday
     - action: action_check_opening_hours_at_time
 
 - story: user asks is restaurant open now
@@ -76,24 +54,33 @@ stories:
 - story: user wants to order some food
   steps:
     - intent: place_order
+      entities:
+        - quantity: 2
+        - dish_item: Spaghetti Carbonara
     - action: action_place_order
     - action: utter_ask_about_adds
 
 - story: user wants to order some food without specified quantity
   steps:
     - intent: place_order_default_one_item
+      entities:
+        - dish_item: Spaghetti Carbonara
     - action: action_place_order_default_one_item
     - action: utter_ask_about_adds
 
 - story: user want some extras
   steps:
     - intent: confirm_adds
+      entities:
+        - type_of_extra_request: without
+        - extra_item: onion
     - action: action_confirm_adds
     - action: utter_ask_about_adds
 
 - story: user do not order anything
   steps:
     - intent: deny
+    - action: action_delete_unconfirmed_order
     - action: utter_order_cancelled
 
 - story: user confirm order

@@ -31,7 +31,6 @@ class ActionOrderConfirmed(Action):
                         dispatcher.utter_message(f"Items: {', '.join(order['items'])}")
                         dispatcher.utter_message(f"Price: {order['price']} USD")
                         dispatcher.utter_message(f"Additional Notes: {', '.join(order['additional_notes'])}\n")
-                        dispatcher.utter_message(text="---")
                         dispatcher.utter_message(f"Pick-up your order in {order['time']} hours")
                 else:
                     dispatcher.utter_message("No orders found.")
@@ -43,5 +42,23 @@ class ActionOrderConfirmed(Action):
         finally:
             file.close()
             os.remove(file_path)
+
+        return []
+
+
+class ActionDeleteUnconfirmedOrder(Action):
+    def name(self) -> Text:
+        return "action_delete_unconfirmed_order"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        file_path = 'data/user_order/user_order.json'
+
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
+            dispatcher.utter_message("Your order wasn't placed...")
 
         return []

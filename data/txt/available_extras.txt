@@ -2,6 +2,7 @@ parmesan
 cheese
 garlic
 bread
+salt
 olives
 salad
 sauce

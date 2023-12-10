@@ -81,6 +81,7 @@ telegram:
 * **webhook_url** - replace <your_url.com> with your url
 
 Get your url using ngrok with command: 
+- download ngrok [here](https://ngrok.com/download)
 ```
 ngrok http 5005
 ```
@@ -119,9 +120,14 @@ Tiramisu: $11
 
 Your input ->  wha the openning houurs?
 
-Mon/Tue/Thu/Fri: 8-20
-Wed/Sat: 10-16
-Sunday: closed
+Our opening hours:
+Monday: 8 - 20
+Tuesday: 8 - 20
+Wednesday: 10 - 16
+Thursday: 8 - 20
+Friday: 8 - 20
+Saturday: 10 - 16
+Sunday: CLOSED
 
 Your input ->  is rest open now?
 

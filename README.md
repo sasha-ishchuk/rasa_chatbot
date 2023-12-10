@@ -1,8 +1,8 @@
 Rasa based chatbot, which is able to handle customers writing to the restaurant, looking for information and ordering the food. 
 
 ### Link to demos: 
-* Telegram demo: https://drive.google.com/file/d/1G-ER6rMzGwPSQX9ePLAllpzX8Eqo3-8S/view?usp=sharing
-* How typos generator works demo: https://drive.google.com/file/d/1bQD8cO6MLGtEHF5YwrS3QM60OHHulV2f/view?usp=sharing
+* Telegram demo: [telegram demo](https://drive.google.com/file/d/1HEAxxq_zND5yCMtNPghBrS1w0dCq_rXb/view?usp=sharing)
+* How typos generator works demo: [typos demo](https://drive.google.com/file/d/1bQD8cO6MLGtEHF5YwrS3QM60OHHulV2f/view?usp=sharing)
 
 ### Chatbot is able to handle those interactions:
 
@@ -57,8 +57,8 @@ rasa shell --debug
 
 ### Integrate with Telegram:
 
-To run chatbot in Telegram follow documentation: https://rasa.com/docs/rasa/connectors/telegram/
-Here you can find additional explanation: https://amilrubasinghe.medium.com/rasa-chatbot-connects-with-your-telegram-account-e2e61f4264d4
+To run chatbot in Telegram follow documentation: [rasa docs](https://rasa.com/docs/rasa/connectors/telegram/)
+Here you can find additional explanation: [useful info](https://amilrubasinghe.medium.com/rasa-chatbot-connects-with-your-telegram-account-e2e61f4264d4)
 
 #### Steps:
 1. Open Telegram and search BotFather.

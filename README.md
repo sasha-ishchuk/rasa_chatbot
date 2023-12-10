@@ -57,8 +57,8 @@ rasa shell --debug
 
 ### Integrate with Telegram:
 
-To run chatbot in Telegram follow documentation: [rasa docs](https://rasa.com/docs/rasa/connectors/telegram/)
-Here you can find additional explanation: [useful info](https://amilrubasinghe.medium.com/rasa-chatbot-connects-with-your-telegram-account-e2e61f4264d4)
+- To run chatbot in Telegram follow documentation: [rasa docs](https://rasa.com/docs/rasa/connectors/telegram/)
+- Here you can find additional explanation: [useful info](https://amilrubasinghe.medium.com/rasa-chatbot-connects-with-your-telegram-account-e2e61f4264d4)
 
 #### Steps:
 1. Open Telegram and search BotFather.
